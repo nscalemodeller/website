@@ -1,2 +1,202 @@
-<!doctype html><html lang="en" data-bs-theme="light"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="I’ve been working on low cost ways to control turnouts. I bought some servos (AU$7 for 4) on eBay and tried to operate my hand made turnout with one of them. Here is a picture of the initial setup:"><meta name="author" content="NScaleModeller"><meta name="generator" content="Ignite v0.1.0"><title>RC Servos to Operate Turnouts</title><link href="/css/bootstrap.min.css" rel="stylesheet"><link href="/css/prism-default-dark.css" rel="stylesheet"><link href="/css/bootstrap-icons.min.css" rel="stylesheet"><link href="https://www.yoursite.com/2018/2018-04-15-rc-servos" rel="canonical"><meta property="og:site_name" content="N Scale Modeller"><meta property="og:title" content="RC Servos to Operate Turnouts"><meta property="twitter:title" content="RC Servos to Operate Turnouts"><meta property="og:description" content="RC Servos to Operate Turnouts"><meta name="twitter:description" content="RC Servos to Operate Turnouts"><meta property="og:url" content="https://www.yoursite.com/2018/2018-04-15-rc-servos"><meta name="twitter:domain" content="yoursite.com"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:dnt" content="on"></head><body><div class="col-sm-10 mx-auto"><div style="padding-top: 20px"><div class="mx-auto card" style="max-width: 1000px"><img src="/images/trainwreck.jpg"  class="card-img"alt=""/><div class="card-img-overlay text-start align-content-end"><div><p style="font-size: 3.0em; margin-bottom: -15px; color: rgb(0 191 255 / 100%); font-weight: 700">N Scale Modeller</p><h3 style="font-weight: 200"><a href="/" style="text-decoration: none; color: #FFF; padding-left: 20px;">'experiments in n scale'</a></h3></div></div></div></div><div class="row"><div class="col-md-8"><div style="padding-top: 20px; padding-bottom: 20px"><div class="row"><div class="col"><p style="margin-top: 10px;"><a href="/2017/2017-03-10-turnout-using-jig" style="text-decoration: none; color: #888;">Previous Post</a></p></div><div class="col"><p class="text-end" style="margin-top: 10px;"><a href="/2018/2018-05-20-muscle-wire" style="text-decoration: none; color: #888;">Next Post</a></p></div></div><div class="card"><div class="card-body"><h2 class="card-title" style="text-decoration: none;">RC Servos to Operate Turnouts</h2><h6 class="card-title">Using rc servos to operate points - updated from my old blog</h6><p class="card-text">Apr 2018</p><p class="card-text"><p>I’ve been working on low cost ways to control turnouts. I bought some servos (AU$7 for 4) on eBay and tried to operate my hand made turnout with one of them. Here is a picture of the initial setup:</p><!--more-->
-<p><div class="text-center"><a href="/images/2018/servo-turnout.jpg"><img src="/images/2018/servo-turnout.jpg" height=" 200" style="margin: 0px 0px 10px 5px; padding: 2px; border: 1px solid grey;"/></a></div></p><p>Servos need about 5 volts plus a pulsed control signal to work. I’ll eventually use a microprocessor to generate the pulse, but for now I’m using 555 timers. The circuit on the breadboard contains two 555 timers. The first timer  generates a continuous pulse 50 times per second. This pulse triggers the second timer which then produces a pulse between 1 and 2 ms, depending on the knob.</p><p><strong>UPDATE 2018:</strong> These days I would just use an Arduino to control the servo. Also, the circuit I used is no longer available on the internet but I am sure you can find one if you want to use 555 timers.</p><p>The servos look like they may be sort-of OK to control a turnout, but there are two problems. The first problem is that the servos make a bit of noise when moving to a new position. They also tend to buzz quite loudly if put under strain - like what happens when a point rail is pushed or pulled tightly against a stock rail. The whole lot is amplified by being mounted on some fibreboard as in the picture.</p><p>The first problem should be able to be reduced by some sort of isolation in the mounting, but the second problem will require careful setting of the pulse endpoints. These endpoints are the minimum and maximum length of the servo control pulse. These will have to be user configurable in some way as they will vary from turnout to turnout.</p><p>Just the other day I came across an interesting website on using servos to control model railroad turnouts. It looks much easier than my setup as it doesn’t require much to hold the servo. I will give it a try and see how it goes.</p><p>The website is <a href="http://www.tamvalleyrr.com/howto/servoswitchdecoder.html">Tamalpais Valley Railroad</a>. He also has a schematic for controlling up to 4 servos using a micro-controller.</p><p><strong>UPDATE 2018:</strong> Since I started experimenting with servos for turnouts around 2010 they have become quite popular for turnout control. Googling will bring up lots of hits with different ways to configure the servo. However I decided the noise problem meant there had to be a better solution.</p></p><div><p>Tagged with: Turnout Control</p></div></div></div></div></div><div class="col-md-4"><div class="sticky-top" style="padding-top: 20px"><div class="mb-2 card"><div class="card-header">Pages</div><div class="card-body"><ul style="list-style: none;"><li><a href="/" style="text-decoration: none; color: #aaa;">Home</a></li><li><a href="/links" style="text-decoration: none; color: #aaa;">Arduino DCC Links</a></li><li><a href="/downloads" style="text-decoration: none; color: #aaa;">Software Downloads</a></li><li><a href="/about" style="text-decoration: none; color: #aaa;">About</a></li><li><a href="/disclaimer" style="text-decoration: none; color: #aaa;">Disclaimer</a></li></ul></div></div><div class="mb-2 card"><div class="card-header">Top Posts</div><div class="card-body"><ul style="list-style: none;"><li><a href="/2019/2019-05-10-linear-stepper" style="text-decoration: none; color: #aaa;">Linear Stepper to Operate Turnouts</a></li><li><a href="/2017/2017-01-23-dremel-turnout-jig" style="text-decoration: none; color: #aaa;">Dremel Tool Turnout Jig</a></li></ul></div></div><div class="mb-2 card"><div class="card-header">Recent Posts</div><div class="card-body"><ul style="list-style: none;"><li><a href="/2019/2019-05-10-linear-stepper" style="text-decoration: none; color: #aaa;">Linear Stepper to Operate Turnouts</a></li><li><a href="/2018/2018-05-21-muscle-wire-update" style="text-decoration: none; color: #aaa;">Muscle Wire Update</a></li><li><a href="/2018/2018-05-20-muscle-wire" style="text-decoration: none; color: #aaa;">Muscle Wire to Operate Turnouts</a></li><li><a href="/2018/2018-04-15-rc-servos" style="text-decoration: none; color: #aaa;">RC Servos to Operate Turnouts</a></li><li><a href="/2017/2017-03-10-turnout-using-jig" style="text-decoration: none; color: #aaa;">First Turnouts Using Dremel Tool Jig</a></li></ul></div></div><div class="mb-2 card"><div class="card-header">Tags</div><div class="card-body"><ul style="list-style: none;"><li><a href="/tags/turnout-control" style="text-decoration: none; color: #aaa;">Turnout Control</a></li><li><a href="/tags/arduino" style="text-decoration: none; color: #aaa;">Arduino</a></li><li><a href="/tags/linear-stepper-motors" style="text-decoration: none; color: #aaa;">Linear Stepper Motors</a></li><li><a href="/tags/turnouts" style="text-decoration: none; color: #aaa;">Turnouts</a></li><li><a href="/tags/muscle-wire" style="text-decoration: none; color: #aaa;">Muscle Wire</a></li><li><a href="/tags/d-c-c-command-station" style="text-decoration: none; color: #aaa;">DCC Command Station</a></li><li><a href="/tags/software" style="text-decoration: none; color: #aaa;">Software</a></li><li><a href="/tags/uncategorized" style="text-decoration: none; color: #aaa;">Uncategorized</a></li><li><a href="/tags/d-c-c" style="text-decoration: none; color: #aaa;">DCC</a></li><li><a href="/tags" style="text-decoration: none; color: #aaa;">All tags</a></li></ul></div></div><div class="card"><div class="card-header">Archive</div><div class="card-body"><ul style="list-style: none;"><li><a href="/2019" style="text-decoration: none; color: #aaa;">2019</a></li><li><a href="/2018" style="text-decoration: none; color: #aaa;">2018</a></li><li><a href="/2017" style="text-decoration: none; color: #aaa;">2017</a></li><li><a href="/2015" style="text-decoration: none; color: #aaa;">2015</a></li></ul></div></div></div></div></div><p class="text-center mt-5">Created with <a href="https://github.com/twostraws/Ignite">Ignite</a></p></div><script src="/js/bootstrap.bundle.min.js"></script><script src="/js/syntax-highlighting.js"></script></body></html>
+<!doctype html>
+<html data-bs-theme="auto" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta content="I’ve been working on low cost ways to control turnouts. I bought some servos (AU$7 for 4) on eBay and tried to operate my hand made turnout with one of them. Here is a picture of the initial setup:" name="description" />
+    <meta content="John Appleseed" name="author" />
+    <meta content="Ignite v0.2.1" name="generator" />
+    <title>RC Servos to Operate Turnouts</title>
+    <link href="/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/css/bootstrap-icons.min.css" rel="stylesheet" />
+    <link href="/css/themes.min.css" rel="stylesheet" />
+    <link href="https://www.example.com/2018/2018-04-15-rc-servos" rel="canonical" />
+    <script>/*
+ Automatic Theme Switching Implementation
+ Used in HTMLHead.swift.
+ For user-driven theme switching implementation, see ignite-core.js.
+ */
+
+(function() {
+    function getThemePreference() {
+        return localStorage.getItem('custom-theme') || 'auto';
+    }
+
+    function applyTheme(themeID) {
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const lightThemeID = document.documentElement.getAttribute('data-light-theme') || 'light';
+        const darkThemeID = document.documentElement.getAttribute('data-dark-theme') || 'dark';
+        const actualThemeID = themeID === 'auto' ? (prefersDark ? darkThemeID : lightThemeID) : themeID;
+
+        document.documentElement.setAttribute('data-bs-theme', actualThemeID);
+        document.documentElement.setAttribute('data-theme-state', themeID);
+    }
+
+    function applySyntaxTheme() {
+        const syntaxTheme = getComputedStyle(document.documentElement)
+            .getPropertyValue('--syntax-highlight-theme').trim().replace(/"/g, '');
+
+        if (!syntaxTheme) return;
+
+        document.querySelectorAll('link[data-highlight-theme]').forEach(link => {
+            link.setAttribute('disabled', 'disabled');
+        });
+
+        const themeLink = document.querySelector(`link[data-highlight-theme="${syntaxTheme}"]`);
+        if (themeLink) {
+            themeLink.removeAttribute('disabled');
+        }
+    }
+
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+        const currentTheme = getThemePreference();
+        if (currentTheme === 'auto') {
+            applyTheme('auto');
+            applySyntaxTheme();
+        }
+    });
+
+    const savedTheme = getThemePreference();
+    applyTheme(savedTheme);
+    applySyntaxTheme();
+})();
+</script>
+    <meta content="N Scale Modeller" property="og:site_name" />
+    <meta content="RC Servos to Operate Turnouts" property="og:title" />
+    <meta content="RC Servos to Operate Turnouts" name="twitter:title" />
+    <meta content="I’ve been working on low cost ways to control turnouts. I bought some servos (AU$7 for 4) on eBay and tried to operate my hand made turnout with one of them. Here is a picture of the initial setup:" property="og:description" />
+    <meta content="I’ve been working on low cost ways to control turnouts. I bought some servos (AU$7 for 4) on eBay and tried to operate my hand made turnout with one of them. Here is a picture of the initial setup:" name="twitter:description" />
+    <meta content="https://www.example.com/2018/2018-04-15-rc-servos" property="og:url" />
+    <meta content="example.com" name="twitter:domain" />
+    <meta content="summary_large_image" name="twitter:card" />
+    <meta content="on" name="twitter:dnt" />
+  </head>
+  <body class="container">
+    <div class="m-4 text-center">
+      <div class="card justify-content-center align-items-center" style="width: 1000px">
+        <img alt="" src="/images/trainwreck.jpg" class="card-img" />
+        <div class="align-content-end card-img-overlay text-start">
+          <p style="color: rgb(0 191 255 / 100%); font-size: 3.0em; font-weight: 700; margin-bottom: -15px">N Scale Modeller</p>
+          <h3 style="font-weight: 200"><a href="/" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover" style="color: #fff; padding-left: 20px; text-decoration: none">'experiments in n scale'</a></h3>
+          <button type="button" class="btn" onclick="igniteSwitchTheme('light');">light</button>
+          <button type="button" class="btn" onclick="igniteSwitchTheme('dark');">dark</button>
+          <button type="button" class="btn" onclick="igniteSwitchTheme('auto');">auto</button>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class=" col-md-8 mt-0">
+        <div class="mt-0">
+          <div>
+            <p><a href="/2017/2017-03-10-turnout-using-jig" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover" style="color: #888; text-decoration: none">Previous Post</a></p>
+            <p class="text-end" style="margin-top: -40px"><a href="/2018/2018-05-20-muscle-wire" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover" style="color: #888; text-decoration: none">Next Post</a></p>
+          </div>
+          <div class="card" style="margin-bottom: 20px">
+            <div class="card-body">
+              <h2 style="text-decoration: none">RC Servos to Operate Turnouts</h2>
+              <h6>Using rc servos to operate points - updated from my old blog</h6>
+              <p>Apr 2018</p>
+              <p class="card-text"></p>
+              <p>I’ve been working on low cost ways to control turnouts. I bought some servos (AU$7 for 4) on eBay and tried to operate my hand made turnout with one of them. Here is a picture of the initial setup:</p>
+              <!--more--> 
+              <p></p>
+              <div class="text-center">
+                <a href="/images/2018/servo-turnout.jpg"><img src="/images/2018/servo-turnout.jpg" height=" 200" style="margin: 0px 0px 10px 5px; padding: 2px; border: 1px solid grey;" /></a>
+              </div>
+              <p></p>
+              <p>Servos need about 5 volts plus a pulsed control signal to work. I’ll eventually use a microprocessor to generate the pulse, but for now I’m using 555 timers. The circuit on the breadboard contains two 555 timers. The first timer generates a continuous pulse 50 times per second. This pulse triggers the second timer which then produces a pulse between 1 and 2 ms, depending on the knob.</p>
+              <p><strong>UPDATE 2018:</strong> These days I would just use an Arduino to control the servo. Also, the circuit I used is no longer available on the internet but I am sure you can find one if you want to use 555 timers.</p>
+              <p>The servos look like they may be sort-of OK to control a turnout, but there are two problems. The first problem is that the servos make a bit of noise when moving to a new position. They also tend to buzz quite loudly if put under strain - like what happens when a point rail is pushed or pulled tightly against a stock rail. The whole lot is amplified by being mounted on some fibreboard as in the picture.</p>
+              <p>The first problem should be able to be reduced by some sort of isolation in the mounting, but the second problem will require careful setting of the pulse endpoints. These endpoints are the minimum and maximum length of the servo control pulse. These will have to be user configurable in some way as they will vary from turnout to turnout.</p>
+              <p>Just the other day I came across an interesting website on using servos to control model railroad turnouts. It looks much easier than my setup as it doesn’t require much to hold the servo. I will give it a try and see how it goes.</p>
+              <p>The website is <a href="http://www.tamvalleyrr.com/howto/servoswitchdecoder.html">Tamalpais Valley Railroad</a>. He also has a schematic for controlling up to 4 servos using a micro-controller.</p>
+              <p><strong>UPDATE 2018:</strong> Since I started experimenting with servos for turnouts around 2010 they have become quite popular for turnout control. Googling will bring up lots of hits with different ways to configure the servo. However I decided the noise problem meant there had to be a better solution.</p>
+              <p></p>
+            </div>
+            <div class="card-footer text-body-secondary">
+              <a href="/tags/turnout--control" rel="tag" class="link-plain link-underline link-underline-opacity-100 link-underline-opacity-100-hover"><span class="badge rounded-pill text-bg-primary" style="margin-right: 5px">Turnout Control</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class=" col">
+        <div class="sticky-top" style="padding-bottom: 20px">
+          <div class="card" style="margin-bottom: 20px">
+            <div class="card-header">
+              Pages
+            </div>
+            <div class="card-body">
+              <ul class="mb-0" style="list-style: none">
+                <li><a href="/" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover m-0" style="color: #aaa; text-decoration: none">Home</a></li>
+                <li><a href="/links" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover m-0" style="color: #aaa; text-decoration: none">Arduino DCC Links</a></li>
+                <li><a href="/downloads" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover m-0" style="color: #aaa; text-decoration: none">Software Downloads</a></li>
+                <li><a href="/about" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover m-0" style="color: #aaa; text-decoration: none">About</a></li>
+                <li><a href="/disclaimer" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover m-0" style="color: #aaa; text-decoration: none">Disclaimer</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="card" style="margin-bottom: 20px">
+            <div class="card-header">
+              Top Posts
+            </div>
+            <div class="card-body">
+              <ul class="mb-0" style="list-style: none">
+                <li><a href="/2019/2019-05-10-linear-stepper" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover" style="color: #aaa; text-decoration: none">Linear Stepper to Operate Turnouts</a></li>
+                <li><a href="/2017/2017-01-23-dremel-turnout-jig" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover" style="color: #aaa; text-decoration: none">Dremel Tool Turnout Jig</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="card" style="margin-bottom: 20px">
+            <div class="card-header">
+              Recent Posts
+            </div>
+            <div class="card-body">
+              <ul class="mb-0" style="list-style: none">
+                <li><a href="/2019/2019-05-10-linear-stepper" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover" style="color: #aaa; text-decoration: none">Linear Stepper to Operate Turnouts</a></li>
+                <li><a href="/2018/2018-05-21-muscle-wire-update" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover" style="color: #aaa; text-decoration: none">Muscle Wire Update</a></li>
+                <li><a href="/2018/2018-05-20-muscle-wire" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover" style="color: #aaa; text-decoration: none">Muscle Wire to Operate Turnouts</a></li>
+                <li><a href="/2018/2018-04-15-rc-servos" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover" style="color: #aaa; text-decoration: none">RC Servos to Operate Turnouts</a></li>
+                <li><a href="/2017/2017-03-10-turnout-using-jig" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover" style="color: #aaa; text-decoration: none">First Turnouts Using Dremel Tool Jig</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="card" style="margin-bottom: 20px">
+            <div class="card-header">
+              Tags
+            </div>
+            <div class="card-body">
+              <ul class="mb-0" style="list-style: none">
+                <li><a href="/tags/turnout--control" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover" style="color: #aaa; text-decoration: none">Turnout Control</a></li>
+                <li><a href="/tags/arduino" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover" style="color: #aaa; text-decoration: none">Arduino</a></li>
+                <li><a href="/tags/linear--stepper--motors" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover" style="color: #aaa; text-decoration: none">Linear Stepper Motors</a></li>
+                <li><a href="/tags/turnouts" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover" style="color: #aaa; text-decoration: none">Turnouts</a></li>
+                <li><a href="/tags/muscle--wire" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover" style="color: #aaa; text-decoration: none">Muscle Wire</a></li>
+                <li><a href="/tags/d-c-c--command--station" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover" style="color: #aaa; text-decoration: none">DCC Command Station</a></li>
+                <li><a href="/tags/software" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover" style="color: #aaa; text-decoration: none">Software</a></li>
+                <li><a href="/tags/uncategorized" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover" style="color: #aaa; text-decoration: none">Uncategorized</a></li>
+                <li><a href="/tags/d-c-c" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover" style="color: #aaa; text-decoration: none">DCC</a></li>
+                <li><a href="/tags/" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover" style="color: #aaa; text-decoration: none">All tags</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              Archive
+            </div>
+            <div class="card-body">
+              <ul class="mb-0" style="list-style: none">
+                <li><a href="/2019" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover" style="color: #aaa; text-decoration: none">2019</a></li>
+                <li><a href="/2018" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover" style="color: #aaa; text-decoration: none">2018</a></li>
+                <li><a href="/2017" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover" style="color: #aaa; text-decoration: none">2017</a></li>
+                <li><a href="/2015" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover" style="color: #aaa; text-decoration: none">2015</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="mt-3 text-center">Created in Swift with <a href="https://github.com/twostraws/Ignite" class="link-underline link-underline-opacity-100 link-underline-opacity-100-hover">Ignite</a></p>
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/ignite-core.js"></script>
+  </body>
+</html>
